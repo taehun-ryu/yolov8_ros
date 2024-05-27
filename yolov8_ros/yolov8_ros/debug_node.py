@@ -134,7 +134,7 @@ class DebugNode(LifecycleNode):
         font = cv2.FONT_HERSHEY_SIMPLEX
         cv2.putText(cv_image, label, pos, font,
                     1, color, 1, cv2.LINE_AA)
-        cv2.circle(cv_image, (int(box_msg.center.position.x), int(box_msg.center.position.y)), 1, color,-1)
+        cv2.circle(cv_image, (int(box_msg.center.position.x), int(box_msg.center.position.y)), 3, (255,255,255),-1)
         return cv_image
 
     def draw_mask(self, cv_image: np.array, detection: Detection, color: Tuple[int]) -> np.array:
